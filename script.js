@@ -6,7 +6,7 @@ submitButton.addEventListener("click", () => {
   if (inputText.value) {
     const newTask = document.createElement("li");
     const newTextTask = document.createElement("input");
-    newTextTask.setAttribute("class", "addedTask form-group control-label");
+    newTextTask.setAttribute("class", "addedTask form-group control-label col-sm-7");
     newTextTask.value = inputText.value;
     newTextTask.disabled = true;
     newTask.append(newTextTask);
