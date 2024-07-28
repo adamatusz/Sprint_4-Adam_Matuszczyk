@@ -1,4 +1,3 @@
-
 const inputText = document.getElementById("inputField");
 const submitButton = document.getElementById("clickButton");
 const listTasks = document.getElementById("listTasks");
@@ -7,7 +6,7 @@ submitButton.addEventListener("click", () => {
   if (inputText.value) {
     const newTask = document.createElement("li");
     const newTextTask = document.createElement("input");
-    newTextTask.setAttribute("class", "addedTask form-group control-label")
+    newTextTask.setAttribute("class", "addedTask form-group control-label");
     newTextTask.value = inputText.value;
     newTextTask.disabled = true;
     newTask.append(newTextTask);
@@ -28,13 +27,8 @@ const createButton = (parent) => {
   deleteButton.textContent = "Usuń";
   deleteButton.setAttribute("class", "btn-delete btn-danger");
 
-//   let createBr = document.createElement("hr");
-//   console.log(createBr)
-
   parent.append(editButton);
   parent.append(deleteButton);
-//   parent.append(createBr);
-
 
   editButton.addEventListener("click", () => {
     switch (editButton.textContent) {
