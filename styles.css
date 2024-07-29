@@ -16,5 +16,5 @@ hr::after {
     content: 'Tutaj wyswietlą się zadania';
     padding: 0 4px;
     position: relative;
-    top: -13px;
+    top: -10px;
 }
