@@ -6,7 +6,10 @@ submitButton.addEventListener("click", () => {
   if (inputText.value) {
     const newTask = document.createElement("li");
     const newTextTask = document.createElement("input");
-    newTextTask.setAttribute("class", "addedTask form-group control-label col-sm-7");
+    newTextTask.setAttribute(
+      "class",
+      "addedTask form-group control-label col-sm-7"
+    );
     newTextTask.value = inputText.value;
     newTextTask.disabled = true;
     newTask.append(newTextTask);
@@ -19,16 +22,16 @@ submitButton.addEventListener("click", () => {
 });
 
 const createButton = (parent) => {
-  let editButton = document.createElement("button");
+  const editButton = document.createElement("button");
   editButton.textContent = "Edytuj";
   editButton.setAttribute("class", "btn-edit btn-info btn-outline-secondary");
 
-  let deleteButton = document.createElement("button");
+  const deleteButton = document.createElement("button");
   deleteButton.textContent = "Usuń";
   deleteButton.setAttribute("class", "btn-delete btn-danger");
 
-  parent.append(editButton);
-  parent.append(deleteButton);
+  parent.append(editButton, deleteButton);
+  // parent.append(deleteButton);
 
   editButton.addEventListener("click", () => {
     switch (editButton.textContent) {
