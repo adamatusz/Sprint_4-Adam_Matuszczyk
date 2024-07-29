@@ -45,7 +45,7 @@ const createButton = (parent) => {
         }
         break;
       default:
-        alert("Unexpected button state.");
+        alert("Nieznany komunikat");
     }
   });
 
